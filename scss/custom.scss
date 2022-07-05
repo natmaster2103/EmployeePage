@@ -1,0 +1,23 @@
+
+.main-content-container{
+    background: #f5f5f5;
+}
+
+// variables 
+$primary : #29ae98;
+
+// theme-color
+$theme-colors: (
+  "primary":    #29ae98,
+  "secondary":  #ffffff,
+);
+
+
+// @import "../css/bootsrap.min.css";
+@import "../css/style.css";
+@import "../css/site.css";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
