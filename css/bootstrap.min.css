@@ -12,7 +12,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-
+ @import"/css/style.css";
+ @import"/css/site.css";
+ 
  :root {
      --blue: #2196F3;
      --indigo: #6610f2;
@@ -27,7 +29,7 @@
      --white: #fff;
      --gray: #666;
      --gray-dark: #222;
-     --primary: #29ae98;
+     --primary: #1DA455;
      --secondary: #fff;
      --success: #4CAF50;
      --info: #9C27B0;
@@ -4660,7 +4662,7 @@
  }
  
  .navbar-toggler:not(:disabled):not(.disabled) {
-     cursor: pointer
+     /* cursor: pointer; */
  }
  
  .navbar-toggler-icon {
@@ -4995,7 +4997,7 @@
  }
  
  .navbar-dark .navbar-brand {
-     color: #fff
+     color: #fff;
  }
  
  .navbar-dark .navbar-brand:hover,
@@ -7214,7 +7216,7 @@
      }
  
      .d-lg-block {
-         display: block !important
+         display: block !important;
      }
  
      .d-lg-table {
@@ -10427,7 +10429,8 @@
  }
  
  .navbar-brand {
-     font-size: 24px
+     font-size: 24px;
+     magin: 14px 5px 0 20px;
  }
  
  .navbar-nav .nav-link {

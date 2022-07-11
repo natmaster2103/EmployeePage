@@ -18,6 +18,7 @@ body {
 .navbar .main-menu .nav-link {
     padding: 10px;
 }
+
 .navbar .main-menu ul.nav.navbar-nav > .separator > a {
     display: block;
     overflow: hidden;
@@ -30,9 +31,10 @@ body {
     background-color: rgba(0,0,0,0.1);
 }
 .navbar-brand {
-    background: no-repeat url('Images/MainLogo.svg');
+    background: no-repeat url('/Asset/img/Git-logo.png');
+    background-size: contain;
     margin: 0;
-    width: 77px;
+    min-width:210px;
     height: 28px;
 }
 @media (min-width: 992px) {
@@ -45,8 +47,11 @@ body {
     .navbar .main-menu .nav-link {
         padding: 23px 16px 24px;
     }
+    .navbar .main-menu li:first-child a{
+        padding-left: 0;
+    }
     .navbar-brand {
-        margin: 0 10px;
+        /* margin: 0 10px; */
     }
     .main-menu .themes-item > a {
         background-color: #333;
@@ -77,6 +82,7 @@ body {
 }
 .filter-panel {
     min-width: 210px;
+    display: block;
 }
 .filter-panel .filter-navbar {
     margin: 14px 5px 0 20px;

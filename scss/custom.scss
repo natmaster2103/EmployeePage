@@ -4,19 +4,20 @@
 }
 
 // variables 
-$primary : #29ae98;
+$primary : #1DA455;
 
 // theme-color
 $theme-colors: (
-  "primary":    #29ae98,
+  "primary":    #1DA455,
   "secondary":  #ffffff,
 );
 
 
-// @import "../css/bootsrap.min.css";
+
+@import "../css/bootstrap.min.css";
 @import "../css/style.css";
 @import "../css/site.css";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 
 

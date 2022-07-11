@@ -5084,6 +5084,7 @@ body > div > .dxbs-th .card-body
 .dxbs-toolbar .dropdown-menu
 {
     overflow: visible;
+    left: 0;
 }
 .dxbs-menu span.image,
 .dxbs-popup-menu span.image,
@@ -10263,7 +10264,6 @@ table.dxbs-timeline-view,
 }
 .dxbs-dropdown-area.dxbs-listbox ul
 {
-    margin-bottom: 0px;
 }
 .dxbs-calendar .btn:not(.disabled)
 {

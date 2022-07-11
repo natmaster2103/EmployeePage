@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Employees</title>
-	<!-- bootrapes -->
-	<link rel="stylesheet" href="../css/custom.min.css">
-    <!-- font awsome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <body id="body" class="theme-materia dx-device-desktop dx-device-generic">
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white  " role="navigation" >
-			<a href="#" class="navbar-brand my-auto">
-                <img src="./Asset/img/GIT.png" style="width: 60px;"   alt="Logo">         
-            </a>
-            <button type="button" class="navbar-toggler navbar-toggler-right">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse main-menu-container ">
-                <nav class=" main-menu ms-auto px-2">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="text">Dashboard</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="text">Customer</span></a></li>
-                        <li class="nav-item active"><a href="#" class="nav-link"><span class="text">Employees</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="text">Tasks</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="text">Products</span></a></li>
-                    </ul>
-                </nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employees Cardviews</title>
+<!-- bootstrape -->
+<link rel="stylesheet" href="css/custom.min.css">
+<!-- font awsome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="Scripts/site.js" type="text/javascript"></script>
+</head>
+
+<body id="body" class="theme-materia dx-device-desktop dx-device-generic">
+    
+	<!-- partial:partials/_navbar.html -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white "role="navigation" >
+        <a href="#" class="navbar-brand my-auto"></a>
+        <button type="button" class="navbar-toggler navbar-toggler-right" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse main-menu-container" id="navbarToggler">
+            <nav class=" main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="text">Dashboard</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="text">Customer</span></a></li>
+                    <li class="nav-item active"><a href="#" class="nav-link"><span class="text">Employees</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="text">Tasks</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="text">Products</span></a></li>
+                </ul>
+            </nav>
+        </div>
+	</nav>
             </div>
 	</nav><!-- .navbar -->
 	<div class="main-content-container">
@@ -405,20 +409,20 @@
     <!-- modal -->
                 
     <div class="modal fade" id="readOnlyPopup" tabindex="-1" aria-labelledby="MessagePopup" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="MessagePopup-title">Information</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Data modifications are not allowed in the online demo.
-                            If you need to test data editing functionality, please install DevExpress components on your machine and run the demo locally.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="MessagePopup-title">Information</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Data modifications are not allowed in the online demo.
+                If you need to test data editing functionality, please install DevExpress components on your machine and run the demo locally.
+            </div>
+        </div>
+        </div>
+    </div>
+                <!-- MODAL NEW EMPLOYEE -->
                 <div class="modal fade" id="ModalNewTask" tabindex="-1" aria-labelledby="ModalNewTask" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -1092,13 +1096,790 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div><!-- End - modal -->
 
+                <!-- MODAL NEW TASK -->
+                <div class="dxbs-popup modal-dialog modal-lg" id="TaskEditPopup"
+                    style="opacity: 1; visibility: visible; z-index: 1102;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="modal-title">New Task (John Heart)</span>
+                        </div>
+                        <div class="modal-body" style="margin-bottom: 69px; margin-top: 0px;">
+                            <div class="dxbs-fl form-horizontal" id="TaskEditFormLayout">
+                                <div class="row">
+                                    <div id="TaskEditFormLayout_0" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="TaskSubjectTextBox_I">Subject:<em
+                                                    class="text-muted">*</em></label>
+                                            <div class="dxbs-textbox dxbs-fl-ctrl" id="TaskSubjectTextBox">
+                                                <div>
+                                                    <input id="TaskSubjectTextBox_I" class="form-control" type="text"
+                                                        name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$TaskSubjectTextBox"
+                                                        maxlength="100"><span class="dxbs-feedback"><span
+                                                            class="fa fa-exclamation-circle d-none" data-error-image=""></span></span>
+                                                </div>
+                                            </div>
+                                            <script id="dxss_1275733287" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientTextBox, 'TaskSubjectTextBox', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$TaskSubjectTextBox', 'customValidationEnabled': true, 'isValid': true, 'errorText': 'Invalid value', 'validationPatterns': [new ASPx.RequiredFieldValidationPattern('Subject is required')], 'isErrorFrameRequired': true, 'errorDisplayMode': 'i', 'errorImageIsAssigned': true, 'cssClasses': {} });
 
-
+                            //-->
+                                            </script>
                 
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_1" class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="OwnerComboBox_I">Owner:<em
+                                                    class="text-muted">*</em></label>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-combobox" id="OwnerComboBox">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="OwnerComboBox_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$OwnerComboBox"
+                                                            autocomplete="off"><span class="dxbs-feedback"><span
+                                                                class="fa fa-exclamation-circle d-none"
+                                                                data-error-image=""></span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-listbox dxbs-dropdown-area dxbs-dm dropdown-menu dx-dropdown-menu"
+                                                            id="OwnerComboBox_L" style="left: 0px; top: 36px; width: 255px;">
+                                                            <ul class="list-group" style="height: 192.5px;">
+                                                                <li id="OwnerComboBox_LVirtualScrollTopSpacer" data-type="spacer"
+                                                                    style="height: 0px; display: none;"></li>
+                
+                                                                <li id="OwnerComboBox_L_LBI0"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI0LBL" href="javascript:;"><span>John
+                                                                            Heart</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI1"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI1LBL" href="javascript:;"><span>Samantha
+                                                                            Bright</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI2"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI2LBL" href="javascript:;"><span>Arthur
+                                                                            Miller</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI3"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI3LBL" href="javascript:;"><span>Robert
+                                                                            Reagan</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI4"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI4LBL" href="javascript:;"><span>Greta
+                                                                            Sims</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI5"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI5LBL" href="javascript:;"><span>Brett
+                                                                            Wade</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI6"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI6LBL" href="javascript:;"><span>Sandra
+                                                                            Johnson</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI7"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI7LBL" href="javascript:;"><span>Edward
+                                                                            Holmes</span></a></li>
+                                                                <li id="OwnerComboBox_L_LBI8"><a class="dropdown-item"
+                                                                        id="OwnerComboBox_L_LBI8LBL" href="javascript:;"><span>Barbara
+                                                                            Banks</span></a></li>
+                                                                <li id="OwnerComboBox_LVirtualScrollBottomSpacer" data-type="spacer"
+                                                                    style="height: 1176px;"></li>
+                                                            </ul><input type="hidden"
+                                                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$OwnerComboBox$L"
+                                                                id="OwnerComboBox_L_VI" value="">
+                                                        </div>
+                                                        <script id="dxss_537117349" data-executed="true">
+                            < !--
+                                                                ASPx.createControl(dx.BootstrapClientListBox, 'OwnerComboBox_L', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$OwnerComboBox$L', 'stateObject': { 'CustomCallback': '' }, 'isComboBoxList': true, 'hasSampleItem': true, 'itemsInfo': [{ 'value': '1', 'text': 'John Heart' }, { 'value': '2', 'text': 'Samantha Bright' }, { 'value': '3', 'text': 'Arthur Miller' }, { 'value': '4', 'text': 'Robert Reagan' }, { 'value': '5', 'text': 'Greta Sims' }, { 'value': '6', 'text': 'Brett Wade' }, { 'value': '7', 'text': 'Sandra Johnson' }, { 'value': '8', 'text': 'Edward Holmes' }, { 'value': '9', 'text': 'Barbara Banks' }, { 'value': '10', 'text': 'Kevin Carter' }, { 'value': '11', 'text': 'Cynthia Stanwick' }, { 'value': '12', 'text': 'Sam Hill' }, { 'value': '13', 'text': 'David Jones' }, { 'value': '14', 'text': 'Victor Norris' }, { 'value': '15', 'text': 'Mary Stern' }, { 'value': '16', 'text': 'Robin Cosworth' }, { 'value': '17', 'text': 'Kelly Rodriguez' }, { 'value': '18', 'text': 'James Anderson' }, { 'value': '19', 'text': 'Anthony Remmen' }, { 'value': '20', 'text': 'Olivia Peyton' }, { 'value': '21', 'text': 'Taylor Riley' }, { 'value': '22', 'text': 'Amelia Harper' }, { 'value': '23', 'text': 'Walter Hobbs' }, { 'value': '24', 'text': 'Bradley Jameson' }, { 'value': '25', 'text': 'Karen Goodson' }, { 'value': '26', 'text': 'Marcus Orbison' }, { 'value': '27', 'text': 'Sandra Bright' }, { 'value': '28', 'text': 'Morgan Kennedy' }, { 'value': '29', 'text': 'Violet Bailey' }, { 'value': '30', 'text': 'Kent Samuelson' }, { 'value': '31', 'text': 'Natalie Maguirre' }, { 'value': '32', 'text': 'Bart Arnaz' }, { 'value': '33', 'text': 'Leah Simpson' }, { 'value': '34', 'text': 'Arnold Schwartz' }, { 'value': '35', 'text': 'William Zimmer' }, { 'value': '36', 'text': 'Samantha Piper' }, { 'value': '37', 'text': 'Margaret Boxter' }, { 'value': '38', 'text': 'Terry Bradley' }, { 'value': '39', 'text': 'Gabriel Jones' }, { 'value': '40', 'text': 'Lucy Ball' }, { 'value': '41', 'text': 'James Packard' }, { 'value': '42', 'text': 'Hannah Brooklyn' }, { 'value': '43', 'text': 'Harvey Mudd' }, { 'value': '44', 'text': 'Clark Morgan' }, { 'value': '45', 'text': 'Todd Hoffman' }, { 'value': '46', 'text': 'Jack Garmin' }, { 'value': '47', 'text': 'Lincoln Bartlett' }, { 'value': '48', 'text': 'Brad Farkus' }, { 'value': '49', 'text': 'Jennifer Hobbs' }, { 'value': '50', 'text': 'Dallas Lou' }, { 'value': '51', 'text': 'Stu Pizaro' }], 'cssClasses': {} }, { 'SelectedIndexChanged': function (s, e) { ASPx.CBLBSelectedIndexChanged('OwnerComboBox', e); }, 'ItemClick': function (s, e) { ASPx.CBLBItemMouseUp('OwnerComboBox', e); } });
 
-    <!-- End - modal -->
+                            //-->
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div><input type="hidden" name="OwnerComboBox_VI" id="OwnerComboBox_VI" value="">
+                                            <script id="dxss_1383985560" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientComboBox, 'OwnerComboBox', '', { 'callBack': function (arg) { WebForm_DoCallback('ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$OwnerComboBox', arg, ASPx.Callback, 'OwnerComboBox', ASPx.CallbackError, true); }, 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$OwnerComboBox', 'customValidationEnabled': true, 'isValid': true, 'errorText': 'Invalid value', 'validationPatterns': [new ASPx.RequiredFieldValidationPattern('Owner is required')], 'isErrorFrameRequired': true, 'errorDisplayMode': 'i', 'errorImageIsAssigned': true, 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'ddmInput': true, 'lastSuccessValue': null, 'islastSuccessValueInit': true, 'loadingPanel': { 'imageCssClass': 'fa fa-sync' }, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_2" class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="AssignedToComboBox_I">AssignedTo:<em
+                                                    class="text-muted">*</em></label>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-combobox" id="AssignedToComboBox">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="AssignedToComboBox_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$AssignedToComboBox"
+                                                            value="John Heart" autocomplete="off"><span class="dxbs-feedback"><span
+                                                                class="fa fa-exclamation-circle d-none"
+                                                                data-error-image=""></span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-listbox dxbs-dropdown-area dxbs-dm dropdown-menu dx-dropdown-menu"
+                                                            id="AssignedToComboBox_L">
+                                                            <ul class="list-group">
+                                                                <li id="AssignedToComboBox_LVirtualScrollTopSpacer" data-type="spacer">
+                                                                </li>
+                
+                                                                <li id="AssignedToComboBox_LVirtualScrollBottomSpacer"
+                                                                    data-type="spacer" style="height: 0px; display: none;"></li>
+                                                            </ul><input type="hidden"
+                                                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$AssignedToComboBox$L"
+                                                                id="AssignedToComboBox_L_VI" value="1">
+                                                        </div>
+                                                        <script id="dxss_1113838897" data-executed="true">
+                            < !--
+                                                                ASPx.createControl(dx.BootstrapClientListBox, 'AssignedToComboBox_L', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$AssignedToComboBox$L', 'savedSelectedIndex': 0, 'isComboBoxList': true, 'hasSampleItem': true, 'itemsInfo': [{ 'value': '1', 'text': 'John Heart' }, { 'value': '2', 'text': 'Samantha Bright' }, { 'value': '3', 'text': 'Arthur Miller' }, { 'value': '4', 'text': 'Robert Reagan' }, { 'value': '5', 'text': 'Greta Sims' }, { 'value': '6', 'text': 'Brett Wade' }, { 'value': '7', 'text': 'Sandra Johnson' }, { 'value': '8', 'text': 'Edward Holmes' }, { 'value': '9', 'text': 'Barbara Banks' }, { 'value': '10', 'text': 'Kevin Carter' }, { 'value': '11', 'text': 'Cynthia Stanwick' }, { 'value': '12', 'text': 'Sam Hill' }, { 'value': '13', 'text': 'David Jones' }, { 'value': '14', 'text': 'Victor Norris' }, { 'value': '15', 'text': 'Mary Stern' }, { 'value': '16', 'text': 'Robin Cosworth' }, { 'value': '17', 'text': 'Kelly Rodriguez' }, { 'value': '18', 'text': 'James Anderson' }, { 'value': '19', 'text': 'Anthony Remmen' }, { 'value': '20', 'text': 'Olivia Peyton' }, { 'value': '21', 'text': 'Taylor Riley' }, { 'value': '22', 'text': 'Amelia Harper' }, { 'value': '23', 'text': 'Walter Hobbs' }, { 'value': '24', 'text': 'Bradley Jameson' }, { 'value': '25', 'text': 'Karen Goodson' }, { 'value': '26', 'text': 'Marcus Orbison' }, { 'value': '27', 'text': 'Sandra Bright' }, { 'value': '28', 'text': 'Morgan Kennedy' }, { 'value': '29', 'text': 'Violet Bailey' }, { 'value': '30', 'text': 'Kent Samuelson' }, { 'value': '31', 'text': 'Natalie Maguirre' }, { 'value': '32', 'text': 'Bart Arnaz' }, { 'value': '33', 'text': 'Leah Simpson' }, { 'value': '34', 'text': 'Arnold Schwartz' }, { 'value': '35', 'text': 'William Zimmer' }, { 'value': '36', 'text': 'Samantha Piper' }, { 'value': '37', 'text': 'Margaret Boxter' }, { 'value': '38', 'text': 'Terry Bradley' }, { 'value': '39', 'text': 'Gabriel Jones' }, { 'value': '40', 'text': 'Lucy Ball' }, { 'value': '41', 'text': 'James Packard' }, { 'value': '42', 'text': 'Hannah Brooklyn' }, { 'value': '43', 'text': 'Harvey Mudd' }, { 'value': '44', 'text': 'Clark Morgan' }, { 'value': '45', 'text': 'Todd Hoffman' }, { 'value': '46', 'text': 'Jack Garmin' }, { 'value': '47', 'text': 'Lincoln Bartlett' }, { 'value': '48', 'text': 'Brad Farkus' }, { 'value': '49', 'text': 'Jennifer Hobbs' }, { 'value': '50', 'text': 'Dallas Lou' }, { 'value': '51', 'text': 'Stu Pizaro' }], 'cssClasses': {} }, { 'SelectedIndexChanged': function (s, e) { ASPx.CBLBSelectedIndexChanged('AssignedToComboBox', e); }, 'ItemClick': function (s, e) { ASPx.CBLBItemMouseUp('AssignedToComboBox', e); } });
+
+                            //-->
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div><input type="hidden" name="AssignedToComboBox_VI" id="AssignedToComboBox_VI"
+                                                value="1">
+                                            <script id="dxss_507040223" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientComboBox, 'AssignedToComboBox', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$AssignedToComboBox', 'customValidationEnabled': true, 'isValid': true, 'errorText': 'Invalid value', 'validationPatterns': [new ASPx.RequiredFieldValidationPattern('Assign to is required')], 'isErrorFrameRequired': true, 'errorDisplayMode': 'i', 'errorImageIsAssigned': true, 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'ddmInput': true, 'lastSuccessValue': '1', 'islastSuccessValueInit': true, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_3" class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="StartDateEdit_I">Start Date:<em
+                                                    class="text-muted">*</em></label>
+                                            <script id="dxss_1934461159" data-executed="true">
+                            < !--
+                                                    (function () {
+                                                        var a = { 'is12HoursCulture': true, 'numPosInf': '∞', 'numNegInf': '-∞' };
+                                                        for (var b in a) ASPx.CultureInfo[b] = a[b];
+                                                    })();
+
+
+                            //-->
+                                            </script>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-date-edit" id="StartDateEdit">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="StartDateEdit_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StartDateEdit"
+                                                            value="7/11/2022" autocomplete="off"><span class="dxbs-feedback"><span
+                                                                class="fa fa-exclamation-circle d-none"
+                                                                data-error-image=""></span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-dm dropdown-menu dxbs-dropdown-area"
+                                                            style="left: 0px; top: 36px;">
+                                                            <div class="dxbs-calendar" id="StartDateEdit_C">
+                                                                <div class="calendar-row">
+                                                                    <div class="calendar-view card">
+                                                                        <div class="card-header btn-group">
+                                                                            <span id="StartDateEdit_C_PYC" class="btn"><span
+                                                                                    class="fa fa-angle-double-left"></span></span><span
+                                                                                id="StartDateEdit_C_PTPC" class="d-none btn"><span
+                                                                                    class="fa fa-angle-left"></span></span><span
+                                                                                id="StartDateEdit_C_PMC" class="btn"><span
+                                                                                    class="fa fa-angle-left"></span></span><span
+                                                                                id="StartDateEdit_C_TC" class="dxbs-month-title btn"
+                                                                                style="cursor: pointer;">July 2022</span><span
+                                                                                id="StartDateEdit_C_NMC" class="btn"><span
+                                                                                    class="fa fa-angle-right"></span></span><span
+                                                                                id="StartDateEdit_C_NTPC" class="d-none btn"><span
+                                                                                    class="fa fa-angle-right"></span></span><span
+                                                                                id="StartDateEdit_C_NYC" class="btn"><span
+                                                                                    class="fa fa-angle-double-right"></span></span>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <table
+                                                                                class="dxbs-month-table table table-sm table-bordered">
+                                                                                <tbody>
+                                                                                    <tr class="text-center">
+                                                                                        <td></td>
+                                                                                        <th class="dxbs-calendar-dow">Sun</th>
+                                                                                        <th class="dxbs-calendar-dow">Mon</th>
+                                                                                        <th class="dxbs-calendar-dow">Tue</th>
+                                                                                        <th class="dxbs-calendar-dow">Wed</th>
+                                                                                        <th class="dxbs-calendar-dow">Thu</th>
+                                                                                        <th class="dxbs-calendar-dow">Fri</th>
+                                                                                        <th class="dxbs-calendar-dow">Sat</th>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>26</small></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>26</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>27</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>28</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>29</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>30</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>1</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>2</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>27</small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>3</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>4</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>5</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>6</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>7</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>8</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>9</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>28</small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>10</a></td>
+                                                                                        <td class="dxbs-day dxbs-today table-active"
+                                                                                            style=""><a>11</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>12</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>13</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>14</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>15</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>16</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>29</small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>17</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>18</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>19</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>20</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>21</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>22</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>23</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>30</small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>24</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>25</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>26</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>27</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>28</a></td>
+                                                                                        <td class="dxbs-day" style=""><a>29</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>30</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>31</small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger"
+                                                                                            style=""><a>31</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>1</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>2</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>3</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>4</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>5</a></td>
+                                                                                        <td class="dxbs-day dxbs-other-month text-muted"
+                                                                                            style=""><a>6</a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div id="StartDateEdit_C_yc" class="d-none">
+                                                                            <div id="StartDateEdit_C_yt" class="dxbs-fast-nav">
+                                                                                <div class="card-body">
+                                                                                    <table id="StartDateEdit_C_yt_n"
+                                                                                        class="table table-sm table-bordered">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Jan</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Feb</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Mar</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Apr</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    May</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Jun</td>
+                                                                                                <td class="dxbs-fast-nav-item">Jul</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Aug</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Sep</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Oct</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Nov</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Dec</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-toolbar card-footer">
+                                                                    <span id="StartDateEdit_C_BT"
+                                                                        class="btn btn-secondary">Today</span><span
+                                                                        id="StartDateEdit_C_BC" class="btn btn-secondary">Clear</span>
+                                                                </div>
+                                                            </div>
+                                                            <script id="dxss_1785843345" data-executed="true">
+                            < !--
+                                                                    ASPx.createControl(dx.BootstrapClientCalendar, 'StartDateEdit_C', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StartDateEdit$C', 'serverCurrentDate': new Date(2022, 6, 11, 0, 0, 0, 0), 'visibleDate': new Date(2022, 6, 11, 0, 0, 0, 0), 'fastNavRollbackTexts': ['Back To Days', 'Back To Months', 'Back To Years'], 'isDateEditCalendar': true, 'cssClasses': { 'd': 'dxbs-day', 'ddd': 'disabled text-muted', 'da': 'dxbs-other-month text-muted', 'do': 'dxbs-out-of-range disabled text-muted', 'ds': 'table-active', 'dw': 'dxbs-weekend text-danger', 'dt': 'dxbs-today', 'fni': 'dxbs-fast-nav-item', 'fnia': 'text-muted' } }, null, null, { 'selection': [new Date(2022, 6, 11, 0, 0, 0, 0)] });
+
+                            //-->
+                                                            </script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script id="dxss_1590365851" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientDateEdit, 'StartDateEdit', '', { 'callBack': function (arg) { WebForm_DoCallback('ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StartDateEdit', arg, ASPx.Callback, 'StartDateEdit', ASPx.CallbackError, true); }, 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StartDateEdit', 'stateObject': { 'rawValue': '1657533207632.27', 'useMinDateInsteadOfNull': false }, 'customValidationEnabled': true, 'isValid': true, 'errorText': 'Invalid value', 'validationPatterns': [new ASPx.RequiredFieldValidationPattern('Start date is required')], 'isErrorFrameRequired': true, 'errorDisplayMode': 'i', 'errorImageIsAssigned': true, 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'outOfRangeWarningMessages': ['The date must be in the range {0}...{1}', 'The date must be greater than or equal to {0}', 'The date must be less than or equal to {0}'], 'date': new Date(2022, 6, 11, 9, 53, 27, 632), 'dateFormatter': ASPx.DateFormatter.Create('M/d/yyyy'), 'loadingPanel': { 'imageCssClass': 'fa fa-sync', 'fade': false }, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_4" class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="DueDateEdit_I">Due Date:<em
+                                                    class="text-muted">*</em></label>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-date-edit" id="DueDateEdit">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="DueDateEdit_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DueDateEdit"
+                                                            value="7/12/2022" autocomplete="off"><span class="dxbs-feedback"><span
+                                                                class="fa fa-exclamation-circle d-none"
+                                                                data-error-image=""></span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-dm dropdown-menu dxbs-dropdown-area">
+                                                            <div class="dxbs-calendar" id="DueDateEdit_C">
+                                                                <div class="calendar-row">
+                                                                    <div class="calendar-view card">
+                                                                        <div class="card-header btn-group">
+                                                                            <span id="DueDateEdit_C_PYC" class="btn"><span
+                                                                                    class="fa fa-angle-double-left"></span></span><span
+                                                                                id="DueDateEdit_C_PTPC" class="d-none btn"><span
+                                                                                    class="fa fa-angle-left"></span></span><span
+                                                                                id="DueDateEdit_C_PMC" class="btn"><span
+                                                                                    class="fa fa-angle-left"></span></span><span
+                                                                                id="DueDateEdit_C_TC" class="dxbs-month-title btn"
+                                                                                style="cursor: pointer;">July 2022</span><span
+                                                                                id="DueDateEdit_C_NMC" class="btn"><span
+                                                                                    class="fa fa-angle-right"></span></span><span
+                                                                                id="DueDateEdit_C_NTPC" class="d-none btn"><span
+                                                                                    class="fa fa-angle-right"></span></span><span
+                                                                                id="DueDateEdit_C_NYC" class="btn"><span
+                                                                                    class="fa fa-angle-double-right"></span></span>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <table
+                                                                                class="dxbs-month-table table table-sm table-bordered">
+                                                                                <tbody>
+                                                                                    <tr class="text-center">
+                                                                                        <td></td>
+                                                                                        <th class="dxbs-calendar-dow">Sun</th>
+                                                                                        <th class="dxbs-calendar-dow">Mon</th>
+                                                                                        <th class="dxbs-calendar-dow">Tue</th>
+                                                                                        <th class="dxbs-calendar-dow">Wed</th>
+                                                                                        <th class="dxbs-calendar-dow">Thu</th>
+                                                                                        <th class="dxbs-calendar-dow">Fri</th>
+                                                                                        <th class="dxbs-calendar-dow">Sat</th>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                26
+                                                                                            </small></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>26</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>27</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>28</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>29</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>30</a></td>
+                                                                                        <td class="dxbs-day"><a>1</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>2</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                27
+                                                                                            </small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>3</a></td>
+                                                                                        <td class="dxbs-day"><a>4</a></td>
+                                                                                        <td class="dxbs-day"><a>5</a></td>
+                                                                                        <td class="dxbs-day"><a>6</a></td>
+                                                                                        <td class="dxbs-day"><a>7</a></td>
+                                                                                        <td class="dxbs-day"><a>8</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>9</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                28
+                                                                                            </small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>10</a></td>
+                                                                                        <td class="dxbs-day dxbs-today"><a>11</a></td>
+                                                                                        <td class="dxbs-day table-active" style="">
+                                                                                            <a>12</a></td>
+                                                                                        <td class="dxbs-day"><a>13</a></td>
+                                                                                        <td class="dxbs-day"><a>14</a></td>
+                                                                                        <td class="dxbs-day"><a>15</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>16</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                29
+                                                                                            </small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>17</a></td>
+                                                                                        <td class="dxbs-day"><a>18</a></td>
+                                                                                        <td class="dxbs-day"><a>19</a></td>
+                                                                                        <td class="dxbs-day"><a>20</a></td>
+                                                                                        <td class="dxbs-day"><a>21</a></td>
+                                                                                        <td class="dxbs-day"><a>22</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>23</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                30
+                                                                                            </small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>24</a></td>
+                                                                                        <td class="dxbs-day"><a>25</a></td>
+                                                                                        <td class="dxbs-day"><a>26</a></td>
+                                                                                        <td class="dxbs-day"><a>27</a></td>
+                                                                                        <td class="dxbs-day"><a>28</a></td>
+                                                                                        <td class="dxbs-day"><a>29</a></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>30</a></td>
+                                                                                    </tr>
+                                                                                    <tr class="text-center">
+                                                                                        <td class="text-right"><small>
+                                                                                                31
+                                                                                            </small></td>
+                                                                                        <td class="dxbs-day dxbs-weekend text-danger">
+                                                                                            <a>31</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>1</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>2</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>3</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>4</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>5</a></td>
+                                                                                        <td
+                                                                                            class="dxbs-day dxbs-other-month text-muted">
+                                                                                            <a>6</a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div id="DueDateEdit_C_yc" class="d-none">
+                                                                            <div id="DueDateEdit_C_yt" class="dxbs-fast-nav">
+                                                                                <div class="card-body">
+                                                                                    <table id="DueDateEdit_C_yt_n"
+                                                                                        class="table table-sm table-bordered">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Jan</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Feb</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Mar</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Apr</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    May</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Jun</td>
+                                                                                                <td class="dxbs-fast-nav-item">Jul</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Aug</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Sep</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Oct</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Nov</td>
+                                                                                                <td
+                                                                                                    class="dxbs-fast-nav-item text-muted">
+                                                                                                    Dec</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-toolbar card-footer">
+                                                                    <span id="DueDateEdit_C_BT"
+                                                                        class="btn btn-secondary">Today</span><span
+                                                                        id="DueDateEdit_C_BC" class="btn btn-secondary">Clear</span>
+                                                                </div>
+                                                            </div>
+                                                            <script id="dxss_2128137021" data-executed="true">
+                            < !--
+                                                                    ASPx.createControl(dx.BootstrapClientCalendar, 'DueDateEdit_C', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DueDateEdit$C', 'serverCurrentDate': new Date(2022, 6, 11, 0, 0, 0, 0), 'visibleDate': new Date(2022, 6, 12, 0, 0, 0, 0), 'fastNavRollbackTexts': ['Back To Days', 'Back To Months', 'Back To Years'], 'isDateEditCalendar': true, 'cssClasses': { 'd': 'dxbs-day', 'ddd': 'disabled text-muted', 'da': 'dxbs-other-month text-muted', 'do': 'dxbs-out-of-range disabled text-muted', 'ds': 'table-active', 'dw': 'dxbs-weekend text-danger', 'dt': 'dxbs-today', 'fni': 'dxbs-fast-nav-item', 'fnia': 'text-muted' } }, null, null, { 'selection': [new Date(2022, 6, 12, 0, 0, 0, 0)] });
+
+                            //-->
+                                                            </script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script id="dxss_780587359" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientDateEdit, 'DueDateEdit', '', { 'callBack': function (arg) { WebForm_DoCallback('ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DueDateEdit', arg, ASPx.Callback, 'DueDateEdit', ASPx.CallbackError, true); }, 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DueDateEdit', 'stateObject': { 'rawValue': '1657619607632.27', 'useMinDateInsteadOfNull': false }, 'customValidationEnabled': true, 'isValid': true, 'errorText': 'Invalid value', 'validationPatterns': [new ASPx.RequiredFieldValidationPattern('Due date is required')], 'isErrorFrameRequired': true, 'errorDisplayMode': 'i', 'errorImageIsAssigned': true, 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'outOfRangeWarningMessages': ['The date must be in the range {0}...{1}', 'The date must be greater than or equal to {0}', 'The date must be less than or equal to {0}'], 'date': new Date(2022, 6, 12, 9, 53, 27, 632), 'dateFormatter': ASPx.DateFormatter.Create('M/d/yyyy'), 'loadingPanel': { 'imageCssClass': 'fa fa-sync', 'fade': false }, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_5" class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="DetailsMemo_I">Details:</label>
+                                            <div class="dxbs-memo dxbs-fl-ctrl" id="DetailsMemo">
+                                                <div>
+                                                    <textarea id="DetailsMemo_I" class="form-control" maxlength="500" rows="5"
+                                                        name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DetailsMemo"></textarea>
+                                                </div>
+                                            </div>
+                                            <script id="dxss_130174392" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientMemo, 'DetailsMemo', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$DetailsMemo', 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_6" class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="PriorityComboBox_I">Priority:</label>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-combobox" id="PriorityComboBox">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="PriorityComboBox_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$PriorityComboBox"
+                                                            value="Low" autocomplete="off"><span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-listbox dxbs-dropdown-area dxbs-dm dropdown-menu dx-dropdown-menu"
+                                                            id="PriorityComboBox_L">
+                                                            <ul class="list-group">
+                                                                <li id="PriorityComboBox_LVirtualScrollTopSpacer" data-type="spacer">
+                                                                </li>
+                
+                                                                <li id="PriorityComboBox_LVirtualScrollBottomSpacer" data-type="spacer"
+                                                                    style="height: 0px; display: none;"></li>
+                                                            </ul><input type="hidden"
+                                                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$PriorityComboBox$L"
+                                                                id="PriorityComboBox_L_VI" value="Low">
+                                                        </div>
+                                                        <script id="dxss_1221921282" data-executed="true">
+                            < !--
+                                                                ASPx.createControl(dx.BootstrapClientListBox, 'PriorityComboBox_L', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$PriorityComboBox$L', 'savedSelectedIndex': 0, 'isComboBoxList': true, 'hasSampleItem': true, 'itemsInfo': [{ 'value': 'Low', 'text': 'Low' }, { 'value': 'Normal', 'text': 'Normal' }, { 'value': 'High', 'text': 'High' }, { 'value': 'Urgent', 'text': 'Urgent' }], 'cssClasses': {} }, { 'SelectedIndexChanged': function (s, e) { ASPx.CBLBSelectedIndexChanged('PriorityComboBox', e); }, 'ItemClick': function (s, e) { ASPx.CBLBItemMouseUp('PriorityComboBox', e); } });
+
+                            //-->
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div><input type="hidden" name="PriorityComboBox_VI" id="PriorityComboBox_VI" value="Low">
+                                            <script id="dxss_1744366997" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientComboBox, 'PriorityComboBox', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$PriorityComboBox', 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'ddmInput': true, 'lastSuccessValue': 'Low', 'islastSuccessValueInit': true, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_7" class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="StatusComboBox_I">Status:</label>
+                                            <div class="dxbs-dropdown-edit dxbs-fl-ctrl dxbs-combobox" id="StatusComboBox">
+                                                <div class="input-group">
+                                                    <div class="dxbs-input-cntr">
+                                                        <input id="StatusComboBox_I" class="form-control" type="text"
+                                                            name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StatusComboBox"
+                                                            value="Not Started" autocomplete="off"><span></span>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle"
+                                                            data-toggle="dropdown-show"></span>
+                                                        <div class="dxbs-listbox dxbs-dropdown-area dxbs-dm dropdown-menu dx-dropdown-menu"
+                                                            id="StatusComboBox_L">
+                                                            <ul class="list-group">
+                                                                <li id="StatusComboBox_LVirtualScrollTopSpacer" data-type="spacer"></li>
+                
+                                                                <li id="StatusComboBox_LVirtualScrollBottomSpacer" data-type="spacer"
+                                                                    style="height: 0px; display: none;"></li>
+                                                            </ul><input type="hidden"
+                                                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StatusComboBox$L"
+                                                                id="StatusComboBox_L_VI" value="NotStarted">
+                                                        </div>
+                                                        <script id="dxss_1674391792" data-executed="true">
+                            < !--
+                                                                ASPx.createControl(dx.BootstrapClientListBox, 'StatusComboBox_L', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StatusComboBox$L', 'savedSelectedIndex': 0, 'isComboBoxList': true, 'hasSampleItem': true, 'itemsInfo': [{ 'value': 'NotStarted', 'text': 'Not Started' }, { 'value': 'Completed', 'text': 'Completed' }, { 'value': 'InProgress', 'text': 'In Progress' }, { 'value': 'NeedAssistance', 'text': 'Need Assistance' }, { 'value': 'Deferred', 'text': 'Deferred' }], 'cssClasses': {} }, { 'SelectedIndexChanged': function (s, e) { ASPx.CBLBSelectedIndexChanged('StatusComboBox', e); }, 'ItemClick': function (s, e) { ASPx.CBLBItemMouseUp('StatusComboBox', e); } });
+
+                            //-->
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div><input type="hidden" name="StatusComboBox_VI" id="StatusComboBox_VI"
+                                                value="NotStarted">
+                                            <script id="dxss_1656446363" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientComboBox, 'StatusComboBox', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$StatusComboBox', 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'ddmInput': true, 'lastSuccessValue': 'NotStarted', 'islastSuccessValueInit': true, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                    <div id="TaskEditFormLayout_8" class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="col-form-label dxbs-fl-cpt" for="CompletedTrackBar_I">% Completed:</label>
+                                            <script id="dxss_1564181351" data-executed="true">
+                            < !--
+                                                    ASPx.NumberDecimalSeparator = '.';
+
+
+                            //-->
+                                            </script>
+                                            <div class="dxbs-spin-edit dxbs-fl-ctrl" id="CompletedTrackBar">
+                                                <div>
+                                                    <input id="CompletedTrackBar_I" class="form-control" type="text"
+                                                        name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$CompletedTrackBar"
+                                                        value="0" style="padding-right: 54px;" autocomplete="off"><span
+                                                        class="dxbs-feedback dxbs-spin-btn-group"><span class="increment-lg"><span
+                                                                class="dxbs-edit-btn dec"><span
+                                                                    class="dropdown-toggle"></span></span></span><span
+                                                            class="increment-lg"><span class="dxbs-edit-btn inc"><span
+                                                                    class="dropdown-toggle"></span></span></span></span>
+                                                </div>
+                                                <div id="CompletedTrackBarOutOfRWarn" class="dxbs-out-of-range-warn text-danger mark"
+                                                    style="opacity: 0;"><label>The number must be in the range 0...100</label></div>
+                                            </div>
+                                            <script id="dxss_1061046367" data-executed="true">
+                            < !--
+                                                    ASPx.createControl(dx.BootstrapClientSpinEdit, 'CompletedTrackBar', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout$CompletedTrackBar', 'heightCorrectionRequired': true, 'autoCompleteAttribute': { 'name': 'autocomplete', 'value': 'off' }, 'outOfRangeWarningMessages': ['The number must be in the range {0}...{1}', 'The number must be greater than or equal to {0}', 'The number must be less than or equal to {0}'], 'number': 0, 'maxValue': 100, 'cssClasses': {} });
+
+                            //-->
+                                            </script>
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script id="dxss_890663571" data-executed="true">
+                            < !--
+                                    ASPx.createControl(dx.BootstrapClientFormLayout, 'TaskEditFormLayout', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TaskEditFormLayout', 'alignItemCaptionsInAllGroups': true });
+
+                            //-->
+                            </script>
+                        </div>
+                        <div class="modal-footer dxFixedFooter" style="width: 766px;">
+                
+                            <button class="btn btn-secondary dxbs-button" id="TaskEditPopup_TPCFm1_TaskSaveButton" type="submit"
+                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TPCFm1$TC$TaskSaveButton"
+                                value="Save" style="width:100px;">Save</button>
+                            <script id="dxss_462074435" data-executed="true">
+                            < !--
+                                    ASPx.createControl(dx.BootstrapClientButton, 'TaskEditPopup_TPCFm1_TaskSaveButton', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TPCFm1$TC$TaskSaveButton' }, { 'Click': DevAV.TaskSaveButton_Click });
+
+                            //-->
+                            </script>
+                            <button class="btn btn-secondary dxbs-button" id="TaskEditPopup_TPCFm1_TaskCancelButton" type="button"
+                                name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TPCFm1$TC$TaskCancelButton"
+                                value="Cancel" style="width:100px;">Cancel</button>
+                            <script id="dxss_793112719" data-executed="true">
+                            < !--
+                                    ASPx.createControl(dx.BootstrapClientButton, 'TaskEditPopup_TPCFm1_TaskCancelButton', '', { 'uniqueID': 'ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TPCFm1$TC$TaskCancelButton', 'useSubmitBehavior': false, 'autoPostBackFunction': function (postBackArg) { WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$TaskEditForm$TaskEditPopup$TPCFm1$TC$TaskCancelButton", postBackArg, true, "", "", false, true)); } }, { 'Click': DevAV.TaskCancelButton_Click });
+
+                            //-->
+                            </script>
+                
+                        </div>
+                    </div>
+                </div>
+                <!-- END - modal -->
     <footer>
         <div><a href="#"><img src="Asset/img/FooterLogo.png" alt="Logo"></a></div>
         <div><p>Powered by DevExpress ASP.NET Controls 
@@ -1108,7 +1889,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </scrip>
+    </script>
 </body>
 </html>
 
