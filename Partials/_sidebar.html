@@ -1,4 +1,5 @@
-<div class="filter-panel d-none d-lg-block">
+ <!-- partial:partials/_sidebar.html -->
+ <div class="filter-panel d-none d-lg-block">
     <input type="hidden" name="" id="FilterNavBar_State" value="">
         <nav class="dxbs-acc filter-navbar panel-group" id="FilterNavBar">
             <div class="card " id="">
@@ -6,13 +7,28 @@
                     <span class="dxbs-acc-header-title card-title">FILTER</span>
                 </div>
                     <div class="card-body" id="">
-                        <ul class="nav nav-pills flex-column">
-                            <li class="nav-item" id=""><a class="nav-link active" id="" href="javascript:;"><span class="text">All</span></a></li>
-                            <li class="nav-item" id=""><a class="nav-link" id="" href="javascript:;"><span class="text">Salaried</span></a></li>
-                            <li class="nav-item" id=""><a class="nav-link" id="" href="javascript:;"><span class="text">Commission</span></a></li>
-                            <li class="nav-item" id=""><a class="nav-link" id="" href="javascript:;"><span class="text">Contract</span></a></li>
+                        <ul class="nav nav-pills flex-column" id="sideBarNav">
+                            <li class="nav-item"><a class="nav-link active" href="javascript:;"><span class="text">All</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:;"><span class="text">Salaried</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:;"><span class="text">Commission</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:;"><span class="text">Contract</span></a></li>
                         </ul>
                     </div>
             </div>
         </nav>
 </div>
+<script>
+    // Get the container element
+    var sidebarNavContainer = document.getElementById("sideBarNav");
+    // Get all buttons with class="btn" inside the container
+    var sidebarList = sidebarNavContainer.getElementsByClassName("nav-link");
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < sidebarList.length; i++) {
+        sidebarList[i].addEventListener("click", function() {
+        var current = sidebarNavContainer.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+    }
+</script>
+<!-- partial -->

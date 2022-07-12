@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Employees Cardviews</title>
+<title>Employees Gridviews</title>
 <!-- bootstrape -->
 <link rel="stylesheet" href="css/custom.min.css">
 <!-- font awsome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body id="body" class="theme-materia dx-device-desktop dx-device-generic">
 	<!-- partial:partials/_navbar.html -->
@@ -1616,423 +1617,295 @@
             </div><!--END MODAL -->
             </div><!-- main-toolbar-container -->
             
-            <div id="MainCallbackPanel">
-                <div id="MasterContainer">
-                    <div class="dxbs-cardview employees-cards mb-3" id="EmployeeCardView" style="width:100%;">
-                        <div class="card shadow-sm">
-                            <div id="EmployeeCardView_DXMainTable" class="card">
-                                <div class="card-body row dxbs-content">
-                                    
-                                    <div id="" class="col-sm-6 col-lg-4 ">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm border-primary shadow-sm" style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                                    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/3.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p><strong>John Heart</strong></p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
+            <div class="dxbs-gridview mb-3">
+                <div class="card shadow-sm">
+					<table class="table table-bordered table-sm">
+					  <thead>
+					    <tr>
+					      <th class="dxbs-fixed-header-content" scope="col"><a href="#">First Name</a>
+                            <button tabindex="-1" class="btn btn-link " type="button" data-toggle="gridview-column-sort" aria-label="Sorted ascending"><span aria-hidden="true" class="fa fa-arrow-up "></span>
+                            </button>
+                        </th>
+					      <th scope="col"><a href="">Last Name</a> </th>
+					      <th scope="col"><a href="">Title</a></th>
+					      <th scope="col" style="width:15%;"><a href="">Birth Date</a></th>
+					      <th scope="col" style="width:15%;"><a href="">Hire Date</a></th>
+					      <th scope="col" style="width:40px;"></th>
+					    </tr>
+					  </thead>
+					  <tbody class="table-group-divider">
+					    <tr class=" bg-primary text-white">
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+					      <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+
+					    <tr>
+					      <td>Amelia</td>
+					      <td>Harper</td>
+					      <td>Network admin</td>
+					      <td>11/19/1983</td>
+                          <td>02/10/2011</td>
+					      <td><button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button></td>
+					    </tr>
+					  </tbody>
+					</table>
+					<div class="card-body">
+						<nav  class="d-flex align-item-center flex-wrap dxbs-pager " aria-label="Page navigation">
+                            <div class=" summary form-inline form-group ">  
+                                <div class="form-control-plaintext">
+                                  Page 1 of 7 (51 items)
                                 </div>
                             </div>
-                        
-                                                </div>
-                                            </div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a class="page-link" role="presentation" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" role="presentation" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" role="presentation" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" role="presentation" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" role="presentation" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" role="presentation" href="#">Next</a></li>
+                            </ul>
+
+                            <div class="form-inline form-group ml-auto align-item-center">
+                                <div class="input-group">
+                                    <label class="" for="">Page size:</label>
+                                    <input class="form-control" type="text" readonly="readonly" value="8" aria-label="Text input with dropdown button" style="width:4rem;">
+                                    <div class="dropdown">
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                          <li><a class="dropdown-item" href="#">5</a></li>
+                                          <li><a class="dropdown-item" href="#">8</a></li>
+                                          <li><a class="dropdown-item" href="#">12</a></li>
+                                        </ul>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+					</div>
+				</div><!-- .card -->
+                </div>
+
+                <div class="card shadow-sm ">
+                    <div class="card-body">
+                        <div id="DetailsCallbackPanel" style="width:100%;">
+                            <div class="employees-details row">
+                                <div class="employees-details-info col-lg-4 col-md-5 mb-2">
+                                    <div class="employees-details-info-title">
+                                        <p class="mb-0">
+                                            <span id="EmployeeName" class="lead"> Jonh Heard</span>
+                                            <button type="button" class="edit-btn" data-bs-toggle="modal" data-bs-target="#modal_EditEmployee"></button>
+                                        </p>
+                                        <p id="EmployeeTitle" class="text-muted">CEO</p>
+                                    </div>
+                                    <div class="employees-details-info-body">
+                                        <div class="mr-2">
+                                            <img id="EmployeesImg"  src="Asset/img/1.jpg" alt="Photo">
                                         </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card  shadow-sm" style="">
-                                            <div class="card-body " style="height: 165px;">
-                                                <div id="">
-                                                    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="gasset/img/2.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p>
-                                        <strong>John Heart</strong>
-                                    </p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                                    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/3.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p>
-                                        <strong>John Heart</strong>
-                                    </p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                                    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/4.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p>
-                                        <strong>John Heart</strong>
-                                    </p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                                    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/5.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p>
-                                        <strong>John Heart</strong>
-                                    </p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                            <div>    
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/6.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p>
-                                        <strong>John Heart</strong>
-                                    </p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                            </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                    <div>
-                                    <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                                    <div class="card-content">
                                         <div>
-                                            <img class="card-image" src="../asset/img/8.jpg" alt="">
-                                        </div>
-                                        <div class="card-text px-2">
-                                            <p><strong>John Heart</strong></p>
-                                            <p class="m-0">351 S Hill St.</p>
-                                            <p class="m-0">Los Angeles, CA</p>
-                                            <p class="m-0">(213) 555-9392</p>
-                                            <p class="m-0">jheart@dx-email.com</p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                    
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                                                <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                                                <div class="card-content">
-                                                    <div>
-                                                        <img class="card-image" src="../asset/img/1.jpg" alt="">
-                                                    </div>
-                                                    <div class="card-text px-2">
-                                                        <p><strong>John Heart</strong></p>
-                                                        <p class="m-0">351 S Hill St.</p>
-                                                        <p class="m-0">Los Angeles, CA</p>
-                                                        <p class="m-0">(213) 555-9392</p>
-                                                        <p class="m-0">jheart@dx-email.com</p>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                                    <div id="" class="col-sm-6 col-lg-4">
-                                        <div class="card dxbs-card employees-card employees-focused-card shadow-sm " style="">
-                                            <div class="card-body" style="height: 165px;">
-                                                <div id="">
-                            <button type="button" class="edit-btn" data-bs-target="#modal_EditEmployee" data-bs-toggle="modal" onclick="DevAV.Page.EmployeeEditButton_Click('1')"></button>
-                            <div class="card-content">
-                                <div>
-                                    <img class="card-image" src="../asset/img/7.jpg" alt="">
-                                </div>
-                                <div class="card-text px-2">
-                                    <p><strong>John Heart</strong></p>
-                                    <p class="m-0">351 S Hill St.</p>
-                                    <p class="m-0">Los Angeles, CA</p>
-                                    <p class="m-0">(213) 555-9392</p>
-                                    <p class="m-0">jheart@dx-email.com</p>
-                                </div>
-                            </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- EmployeeCardView -->
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <input type="hidden" name="ctl00$ctl00$RootPlaceHolder$MainCallbackPanel$MainContentPlaceHolder$ctl00$EmployeeCardView$DXPagerBottom" id="EmployeeCardView_DXPagerBottom_State" value="{&amp;quot;pageIndex&amp;quot;:0,&amp;quot;itemsPerPage&amp;quot;:6,&amp;quot;allPagesPageIndex&amp;quot;:0,&amp;quot;itemCount&amp;quot;:51}">
-                                <nav class="dxbs-pager d-flex align-item-center flex-wrap " id="EmployeeCardView_DXPagerBottom" style="width:100%;">
-                                    <div class="summary form-inline form-group">
-                                        <div class="form-control-plaintext">
-                                            Page 1 of 9
+                                            <p><strong>ADDRESS</strong>
+                                            <br>
+                                            <span id="DetailsAddressText">
+                                                DetailsAddressText <br>
+                                                351 S Hill St.
+                                            </span>
+                                            </p>
+
+                                            <p><strong>PHONE:</strong>
+                                            <br>
+                                            <span id="DetailsAddressText">
+                                                (213) 555-9208 
+                                            </span>
+                                            </p>
+
+                                            <p><strong>EMAIL:</strong>
+                                            <br>
+                                            <span id="DetailsAddressText">
+                                                jheart@dx-email.com
+                                            </span>
+                                            </p>
                                         </div>
                                     </div>
-                                    <ul class="pagination">
-                                        <li class="page-item disabled"><a class="page-link">Prev</a></li>
-                                        <li class="page-item"><a class="page-link" data-args="PBN" href="javascript:;">Next</a></li>
+                                </div>
+                                
+                                <nav class="employees-details-page col-lg-8 col-md-7 mb-2" id="DetailsPageControl">
+                                    <ul class="nav nav-tabs" role="tablist" id="nav-tab">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active"id="nav-evaluation-tab" data-bs-toggle="tab" data-bs-target="#DetailPageEvaluation" type="button"aria-selected="true">Evaluations</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link"id="Btn-PageEvaluation" data-bs-toggle="tab" data-bs-target="#DetailPageTask" type="button" aria-selected="false">Task</button>
+                                        </li>
                                     </ul>
-                                    <div class="form-inline form-group page-size ml-auto">
-                                        <div class="input-group" id="EmployeeCardView_DXPagerBottom_PSB">
-                                            <label class="" for="EmployeeCardView_DXPagerBottom_PSB">Page size:</label>
-                                            <input class="form-control" type="text" readonly="" value="6" id="EmployeeCardView_DXPagerBottom_PSI">
-                                            <div class="btn-group" data-bs-toggle="toolbar-dropdown" aria-expanded="false">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <li><a class="dropdown-item" href="#">8</a></li>
-                                                    <li><a class="dropdown-item" href="#">12</a></li>
-                                                    <li><a class="dropdown-item" href="#">16</a></li>
-                                                    <li><a class="dropdown-item" href="#">20</a></li>
-                                                </ul>
+                                    <div class="tab-content"id="nav-tabContent">
+                                        <div class="tab-pane fade show active" role="tabpanel" id="DetailPageEvaluation" tabindex="0">
+                                            <div class="card">
+                                                <table id="" class="table table-bordered table-sm">
+                                                <thead>
+                                                <tr id="">
+                                                    <th class="dxbs-fixed-header-content" scope="col">
+                                                        <a href="#">subject</a>
+                                                        <button tabindex="-1" class="btn btn-link " type="button" data-toggle="gridview-column-sort" aria-label="Sorted ascending"><span aria-hidden="true" class="fa fa-arrow-up "></span>
+                                                        </button>
+                                                    </th>
+                                                    <th class=""scope="col" style="width:110px;"><a href="#">Created On</a></th>
+                                                    <th style="width: 80px" scope="col"></th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr class="bg-primary text-white">
+                                                        <td class="">John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn">
+                                                            </button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                     <tr class="">
+                                                        <td>John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                  
+                                                    </tr>
+
+                                                    <tr class="">
+                                                        <td>John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="">
+                                                        <td>John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" role="tabpanel" id="DetailPageTask" tabindex="0">
+                                            <div class="card">
+                                                <table id="" class="table table-bordered table-sm">
+                                                <thead>
+                                                <tr id="">
+                                                    <th class="dxbs-fixed-header-content" scope="col"><a href="#">subject</a><button tabindex="-1" class="btn btn-link" type="button" data-toggle="gridview-column-sort" aria-label="Sorted ascending"><span aria-hidden="true" class="fa fa-arrow-up"></span>
+                                                        </button>
+                                                    </th>
+                                                    <th scope="col" style="width:110px;"><a href="#">Created On</a></th>
+                                                    <th style="width: 80px" scope="col"></th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr class="bg-primary text-white">
+                                                        <td class=""> the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn">
+                                                            </button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="">
+                                                        <td> the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="">
+                                                        <td>John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="">
+                                                        <td>John wins CEO of the Year award</td>
+                                                        <td>2/4/2018</td>
+                                                        <td class="command-column">
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="edit-btn"></button>
+                                                            <button type="button" data-toggle="gridview-datarow-custom" data-args="EvaluationEditBtn" class="delete-btn"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </nav>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
-            </div>              
-                
-            <!-- DETAI CALLBACK PANEL -->
-            <div class="card">
-                <div class="card-body">
-                    <div id="DetailsCallbackPanel" style="width:100%;">
-                        <p class="employees-cards-details-title lead"><span id="EmployeeNameText">John Heart</span>&nbsp;&nbsp;<span id="EmployeeDepartmentText" class="text-muted">Management</span>
-                        </p>
-                        <ul class="nav nav-tabs dxbs-right" id="DetailsPageControl_TC">
-                            <li class="nav-item dxbs-tab-prev" id="DetailsPageControl_T0" style="">
-                                <a class="nav-link" href="javascript:;" id="DetailsPageControl_T0T">
-                                <span class="text">Tasks</span></a>
-                            </li>
-                            <li class="nav-item" style="display: none;" id="DetailsPageControl_AT0">
-                                <a class="nav-link active" id="DetailsPageControl_AT0T">
-                                <span class="text">Tasks</span></a>
-                            </li>
-                            <li class="nav-item" style="display: none;" id="DetailsPageControl_T1">
-                                <a class="nav-link" href="javascript:;" id="DetailsPageControl_T1T">
-                                <span class="text">Evaluations</span></a>
-                            </li>
-                            <li class="nav-item dxbs-tab-current" id="DetailsPageControl_AT1" style="">
-                                <a class="nav-link active" id="DetailsPageControl_AT1T">
-                                <span class="text">Evaluations</span></a>
-                            </li>
-                        </ul>
-                
-                        <div class="tab-content" id="DetailsPageControl_CC">
-                            <div class="tab-pane show active"  id="DetailsPageControl_C0">
-                                <div class="dxbs-gridview dxgvAdD" id="CVTasksGridView" style="width: 100%;">
-                                    <div class="card" style="">
-                                        <table id="CVTasksGridView_DXMainTable" class="dxbs-table table table-bordered table-sm" style="">
-                                            <thead>
-                                                <tr id="CVTasksGridView_DXHeadersRow0">
-                                                    <th id="CVTasksGridView_col0" scope="col">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <a data-toggle="gridview-column-sort" aria-label="Subject header column."href="javascript:;">Subject</a>
-                                                        </div>
-                                                    </th>
-                                                    <th id="CVTasksGridView_col1" scope="col" style="width:100px;">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <a data-toggle="gridview-column-sort" aria-label="Start Date header column."href="javascript:;">Start Date</a>
-                                                        </div>
-                                                    </th>
-                                                    <th id="CVTasksGridView_col2" scope="col" style="width:110px;">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <a data-toggle="gridview-column-sort" aria-label="Due Date header column."href="javascript:;">Due Date</a>
-                                                        </div>
-                                                    </th>
-                                                    <th id="CVTasksGridView_col3" scope="col" style="width:80px;">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <a data-toggle="gridview-column-sort" aria-label="Priority header column."href="javascript:;">Priority</a>
-                                                        </div>
-                                                    </th>
-                                                    <th id="CVTasksGridView_col4" scope="col" style="width:200px;">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <span>% Completed</span>
-                                                        </div>
-                                                    </th>
-                                                    <th id="CVTasksGridView_col5" class="dxgRRB" scope="col">
-                                                        <div class="dxbs-fixed-header-content">
-                                                            <span> </span>
-                                                        </div>
-                                                    </th>
-                                                    <th class="dxgvAIC dxbs-header-indent">
-                                                        <button class="invisible btn btn-link dxbs-button icon-only" type="button"><span aria-hidden="true" class="image fa fa-times"></span></button>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr id="CVTasksGridView_DXADRow" class="dxbs-details-row dxgvADR" style="display:none;">
-                                                    <td colspan="6"></td>
-                                                    <td class="dxgvAIC dxbs-nlb dxgRRB">&nbsp;</td>
-                                                </tr>
-                                                <tr id="CVTasksGridView_DXDataRow0" class="dxbs-first-data-row bg-primary text-white" style="">
-                                                    <td class="dxbs-nlb dxgRRB">Choose between PPO and HMO Health Plan</td>
-                                                    <td class="dxbs-nlb dxgRRB">2/15/2018</td>
-                                                    <td class="dxbs-nlb dxgRRB">4/15/2018</td>
-                                                    <td class="dxbs-nlb dxgRRB">High</td>
-                                                    <td id="CVTasksGridView_tccell0_4" class="grid-progress-cell dxbs-nlb dxgRRB">
-                                                        <div class="dxbs-progress grid-progress-bar mr-1"
-                                                            id="CVTasksGridView_cell0_4_Progress_0">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" style="width: 80%;">
-                                                                </div>
-                                                            </div>
-                                                            <span class="grid-progress-value">80%</span>
-                                                        </div>
-                                                    
-                                                    </td>
-                                                    <td id="CVTasksGridView_tccell0_5" class="command-column dxbs-nlb dxgRRB">
-                                                        <button type="button" data-toggle="gridview-datarow-custom" data-args="EditBtn"
-                                                            class="edit-btn"></button>
-                                                        <button type="button" data-toggle="gridview-datarow-custom" data-args="DeleteBtn"
-                                                            class="delete-btn"></button>
-                                                    </td>
-                                                    <td class="dxgvAIC dxbs-nlb">
-                                                        <button title="..." class="dxgvADSB btn btn-link dxbs-button icon-only"
-                                                            data-toggle="gridview-datarow-showadaptivedetails" type="button"><span
-                                                                aria-hidden="true" class="image fa fa-ellipsis-h"></span></button><button
-                                                            title="X" class="dxgvADHB btn btn-link dxbs-button icon-only"
-                                                            data-toggle="gridview-datarow-hideadaptivedetails" type="button"><span
-                                                                aria-hidden="true" class="image fa fa-times"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr id="CVTasksGridView_DXPRow0" class="dxbs-preview-row text-muted preview-row">
-                                                    <td colspan="6">We need a final decision on whether we are planning on staying with a PPO
-                                                        Health Plan or we plan on switching to an HMO. We cannot proceed with compliance with
-                                                        the Affordable Health Act until we make this decision.
-                                                        John Heart: Samantha, I'm still reviewing costs. I am not in a position to make a final
-                                                        decision at this point.</td>
-                                                    <td class="dxgvAIC dxbs-nlb dxgRRB">&nbsp;</td>
-                                                </tr>
-                                                <tr id="CVTasksGridView_DXDataRow1" class="" style="">
-                                                    <td class="dxbs-nlb dxgRRB">Google AdWords Strategy</td>
-                                                    <td class="dxbs-nlb dxgRRB">2/16/2018</td>
-                                                    <td class="dxbs-nlb dxgRRB">2/28/2018</td>
-                                                    <td class="dxbs-nlb dxgRRB">High</td>
-                                                    <td id="CVTasksGridView_tccell1_4" class="grid-progress-cell dxbs-nlb dxgRRB">
-                                                        <div class="dxbs-progress grid-progress-bar mr-1"
-                                                            id="CVTasksGridView_cell0_4_Progress_0">
-                                                            <div class="progress">
-                                                                <div class="progress-bar" style="width:75%;">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="grid-progress-value">75%</span>
-                                                    </td>
-                                                    <td id="CVTasksGridView_tccell0_5" class="command-column dxbs-nlb dxgRRB">
-                                                        <button type="button" data-toggle="gridview-datarow-custom" data-args="EditBtn"
-                                                            class="edit-btn"></button>
-                                                        <button type="button" data-toggle="gridview-datarow-custom" data-args="DeleteBtn"
-                                                            class="delete-btn"></button>
-                                                    </td>
-                                                    <td class="dxgvAIC dxbs-nlb">
-                                                        <button title="..." class="dxgvADSB btn btn-link dxbs-button icon-only"
-                                                            data-toggle="gridview-datarow-showadaptivedetails" type="button"><span
-                                                                aria-hidden="true" class="image fa fa-ellipsis-h"></span></button><button
-                                                            title="X" class="dxgvADHB btn btn-link dxbs-button icon-only"
-                                                            data-toggle="gridview-datarow-hideadaptivedetails" type="button"><span
-                                                                aria-hidden="true" class="image fa fa-times"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr id="CVTasksGridView_DXPRow0" class="dxbs-preview-row text-muted preview-row">
-                                                    <td colspan="6">Review and the new brochure designs and give final approval. John Heart: I've reviewed them all and forwarded an email with all changes we need to make to the brochures to comply with local regulations.</td>
-                                                    <td class="dxgvAIC dxbs-nlb dxgRRB">&nbsp;</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> <!-- tab-panel -->
-                        </div> <!-- tab-content -->
-                    </div> 
-                </div>  <!-- card-body -->
-            </div>
+
         </div><!-- END .main-content -->        
 	</div><!--END main-content-container  -->  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
